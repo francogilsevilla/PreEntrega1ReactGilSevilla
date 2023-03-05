@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import './App.module.css'
-import Header from './assets/components/header'
+import styles from './App.module.css'
+import CartWidget from './assets/components/cartWidget'
+import ItemListContainer from './assets/components/itemListContainer'
 import NavBar from './assets/components/navbar'
 
 function App() {
   return (
     <div>
-      <Header/>
-      <NavBar/>
-      <h1>Bienvenidos a nuestra Tienda</h1>
+      <div className={styles.header}>
+        <NavBar />
+        <CartWidget />
+      </div>
+      <div>
+        <ItemListContainer greeting="Bienvenido a nuestra tienda" />
+      </div>
     </div>
   )
 }

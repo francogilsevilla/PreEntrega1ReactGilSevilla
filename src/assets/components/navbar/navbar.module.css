@@ -1,11 +1,27 @@
+.headerContainer{
+    height: 75px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.headerTittle{
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .navContainer{
     height: 50px;
+    width: 1150px;
+    font-size: 25px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     text-decoration: none;
     list-style: none;
-    background-color: black;
+    background-color: lightcoral;
 }
 
 .navItem{
