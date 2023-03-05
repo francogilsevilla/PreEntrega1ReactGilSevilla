@@ -1,0 +1,14 @@
+.navContainer{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    background-color: black;
+}
+
+.navItem{
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,18 @@
+.headerContainer{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    background-color: lightblue;
+}
+
+.headerTittle{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.headerCartIcon{
+    font-size: 24px;
+}
