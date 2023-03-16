@@ -1,0 +1,28 @@
+.cardContainer{
+    color: black;
+    background-color: rgb(240, 128, 128);
+    display: inline-grid;
+    width: 300px;
+    height: 350px;
+    margin: 5px;
+    justify-items: center;
+    margin-left: 60px;
+    text-align: center;
+    border-radius: 10%;
+}
+.cardTitle{
+    color: black;
+    text-decoration: underline rgb(240, 128, 128) ;
+}
+
+.cardPrice{
+    color: black;
+    text-decoration: underline rgb(240, 128, 128) ;
+}
+
+.cardImg{
+    display: inline-grid;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}

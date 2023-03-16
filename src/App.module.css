@@ -1,5 +1,10 @@
-.header{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+.greeting{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.cart{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2rem;
 }

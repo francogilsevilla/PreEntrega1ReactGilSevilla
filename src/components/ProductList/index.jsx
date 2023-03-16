@@ -1,13 +1,14 @@
-import styles from "./productList.module.css";
+import Cards from "../Cards"
 
-const  ProductList = () => {
-return (
+
+const ProductList = ({ products }) => {
+  return (
     <div>
-        {product.map((product) => (
-        <h5>{product.title}</h5>
-    ))}
+      {products.map((product) => (
+        <Cards key={product.id} product={product} />
+      ))}
     </div>
-);
+  );
 };
 
 export default ProductList;

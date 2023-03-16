@@ -1,27 +1,29 @@
-.headerContainer{
+/* .container{
     height: 75px;
     width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: lightblue;
-}
+} */
 
-.headerTittle{
+.navTitle{
+    display: flex;
     font-size: 24px;
     font-weight: bold;
 }
 
-.navContainer{
+.container{
     height: 50px;
-    width: 1150px;
+    width: auto;
     font-size: 25px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     text-decoration: none;
     list-style: none;
     background-color: lightcoral;
+    margin: 5px;
 }
 
 .navItem{

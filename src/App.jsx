@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Routes , Route } from 'react-router-dom'
+import { Routes , Route, Navigate } from 'react-router-dom'
 import styles from './App.module.css'
-import CartWidget from './components/cartWidget'
-import ItemListContainer from './components/itemListContainer'
-import NavBar from './components/navbar' 
+import NavBar from './components/navBar'
+import ProductItem from './components/ProductItem'
 import ProductList from './components/ProductList'
 
 function App() {
@@ -11,25 +10,25 @@ function App() {
   const [products, setProducts]= useState([]);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products/1')
+    fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
-            .then(data=>setProducts(data))
-  }, [])
+            .then((data) =>setProducts(data));
+  }, []);
   
 
   return (
     <div>
-      <div className={styles.header}>
-        <NavBar />
-        <CartWidget />
-      </div>
-      <div>
-        <ItemListContainer greeting="Bienvenido a nuestra tienda" />
-      </div>
+      <NavBar/>
+        {/* <CartWidget /> */}
+        {/* <ItemListContainer greeting="Bienvenido a nuestra tienda" /> */}
       <Routes>
-          <Route path="/" element={<h3>Inicio</h3>}></Route>
-          <Route path="/catalogo" element={<ProductList/>}></Route>
-          <Route path=''></Route>
+          <Route path={NavBar.h1} element={<Navigate to='home'/>}/>
+          <Route path='/' element={<Navigate to='home'/>} />
+          <Route path='/Inicio' element={<h3 className={styles.greeting}>Bienvenidos a nuestra tienda!</h3>}/>
+          <Route path='/productos' element={<ProductList products={products}/>}/>
+          <Route path='/productos/:id' element={<ProductItem products={products}/>}/>
+          <Route path='/cart' element={<h3 className={styles.cart}>Carrito de compras</h3>}/>
+          <Route path='*' element={<h4>404 Not Found</h4>}/>
         </Routes>
     </div>
   )
